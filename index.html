@@ -84,11 +84,12 @@
           <h2>card</h2>        
 
      </section>
-       <section class="mt-24">
+     <!--section-2-->>
+       <section class="mt-20">      
      <h2 class="text-4xl font-bold text-center mt-10 mb-10">About the Campaign</h2>
      <section class="flex justify-center items-center mr-[200px] ml-[200px] gap-5">
 
-     <div class="flex-1">
+     <div class="flex-1 mb-16">
                   <img  src="./assets/about.png"></div>
 
      <div class="flex-1">
@@ -102,19 +103,30 @@
      </section>
      </section>
      <footer>
-           <section class="h-72 bg-green-800"><form action="">
-                   <input type="text" placeholder="Your Name"><br>
-                   <input type="text" placeholder="Your Email Addres"><br>
-                   <select name="Number of Trees" id=" Trees">
-                          <option value="">Number of Trees</option>          
-                       <option value="">green</option>
-                       <option value="">red</option> 
-                       <option value="">sohel</option>            
-                   </select><br>
-                    <button class="rounded-2xl bg-yellow-300 py-2 px-5">Donate Now</button>
+           <section class="h-72 bg-green-800 flex justify-center items-center">
+                  <!--login from-->
+  <div class="bg-green-600 p-4 rounded-2xl">
+    <form>
+      <input type="text" placeholder="Your Name"
+        class="block w-full mb-2 px-2 py-2 rounded-lg border-none bg-white">
 
-           </form></section>
-           <section class="bg-green-900 py-2 ">© 2025 Green Earth. All Rights Reserved.</section>       
+      <input type="text" placeholder="Your Email Address"
+        class="block w-full mb-2 px-2 py-2 rounded-lg border-none bg-white">
+
+      <select class="block w-full py-2 px-2 mb-2 rounded-xl border -order-none bg-white" name="trees" id="trees">
+        <option value="">Number of Trees</option>
+        <option value="green">Green</option>
+        <option value="red">Red</option>
+        <option value="sohel">Sohel</option>
+      </select>
+
+      <button class="w-full rounded-2xl bg-yellow-300 py-2 px-12 font-semibold hover:bg-yellow-500 ">
+        Donate Now
+      </button>
+    </form>
+  </div>
+</section>       
+           <section class="bg-green-900 py-2 text center ">© 2025 Green Earth. All Rights Reserved.</section>       
      </footer>
               
 

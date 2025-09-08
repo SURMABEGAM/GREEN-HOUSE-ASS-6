@@ -76,25 +76,24 @@
  </section>                       
     </header>              
                   
- 
        <!--card section-->               
      <section>
  
-  <div class=" grid grid-cols-12">
+  <div class=" grid grid-cols-12 gap-4">
     <!-- Sidebar (Categories) -->
-    <aside class="lg:col-span-2 bg-red-100 p-4">
-      <h2 class="text-xl font-semibold mb-2">Categories</h2>
-      <div id="categories" class="flex flex-col gap-2"></div>
+    <aside class=" md:col-span-12 lg:col-span-2 bg-red-100 p-4">
+      <h2 class="">Categories</h2>
+      <div id="categories" class=""></div>
     </aside>
 
     <!-- Main Content (Plants Grid) -->
-    <section id="card-conteiner" class="lg:col-span-8  bg-slate-500 w-full"> 
+    <section id="card-conteiner" class="md:col-span-9 lg:col-span-7 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 bg-slate-500 w-full"> 
            
     </section>
  
 
   <!-- Cart Section -->
-  <section id="the crad-conteiner" class="lg:col-span-2 bg-green-400 shadow ">
+  <section id="the crad-conteiner" class="lg:col-span-3 md:col-span-3 bg-green-200 shadow ">
     <h2 class="text-xl font-bold">The Cart</h2>
     <ul id="cart" class="list-disc pl-6"></ul>
     <hr>
@@ -102,6 +101,23 @@
      </section>
       </div>
      </section>
+     <!-- The button to open modal -->
+ <label for="my_modal_6" class="btn">open modal</label>
+
+ <!-- Put this part before </body> tag -->
+ <input type="checkbox" id="my_modal_6" class="modal-toggle" />
+ <div class="modal" role="dialog">
+  <div class="modal-box">
+      <figure>
+          <img src="${card.image}" alt="${card.name}" class="h-36 w-full object-cover"/>
+        </figure>             
+    <h3 class="text-lg font-bold">Hello!</h3>
+    <p class="py-4">This modal works with a hidden checkbox!</p>
+    <div class="modal-action">
+      <label for="my_modal_6" class="btn">Close!</label>
+    </div>
+  </div>
+</div>
      <!--section-2-->
        <section class="mt-20">      
      <h2 class="text-4xl font-bold text-center mt-10 mb-10">About the Campaign</h2>
@@ -153,9 +169,6 @@
 </section>       
            <section class="bg-green-900 py-2 text-center ">© 2025 Green Earth. All Rights Reserved.</section>       
      </footer>
-              
-
-
 <script src="./script/script.js"></script>
 </body>
 </html>

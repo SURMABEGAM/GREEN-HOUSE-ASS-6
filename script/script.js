@@ -46,16 +46,13 @@ const showCategories=(titles)=> {
     const  cardConteiner =document.getElementById("card-conteiner")              
             cardConteiner.innerHTML = "";
 
-            cardConteiner.className = "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6";
-                  
-
      crads .forEach((card) =>   {               
   const carddiv = document.createElement("div");
    carddiv.innerHTML=`
       <div class="card bg-base-100 shadow-md rounded-2xl  border mx-auto">
-       <figure>
+      <figure>
           <img src="${card.image}" alt="${card.name}" class="h-36 w-full object-cover"/>
-         </figure>
+        </figure>
         <div class="card-body">
           <h2 class="card-title text-lg">${card.name}</h2>
           <p class="h-16 overflow-hidden text-sm">${card.description}</p>

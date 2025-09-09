@@ -170,6 +170,11 @@ https://openapi.programming-hero.com/api/plant/1
 
 
 #### 1) What is the difference between var, let, and const?
+Ans-: 
+Var : Older type. Used before ES6.
+Function scoped: It is limited only within the function. It is global outside the function. 
+Let :let Re-assignable, but re-declare is not allowed in the same scope.
+const : const Cannot be re-assigned – once a value is assigned, it cannot be changed.
 
 #### 2) What is the difference between map(), forEach(), and filter()? 
 

@@ -29,71 +29,105 @@
     <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-    <header>
-                  <!--navber-->
-        <div class="navbar bg-green-700 shadow-sm">
-  <div class="navbar-start">
-    <div class="dropdown">
-      <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-                  <h2></h2>
+     <header>
+  <!-- Navbar -->
+  <div class="navbar bg-green-700 shadow-sm">
+    <!-- Navbar Start -->
+    <div class="navbar-start">
+      <!-- Mobile Dropdown -->
+      <div class="dropdown">
+        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+          <!-- Hamburger Icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" 
+               class="h-6 w-6 text-emerald-50" 
+               fill="none" 
+               viewBox="0 0 24 24" 
+               stroke="currentColor">
+            <path stroke-linecap="round" 
+                  stroke-linejoin="round" 
+                  stroke-width="2" 
+                  d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </div>
+        <!-- Dropdown Menu -->
+        <ul tabindex="0"
+            class="menu menu-sm dropdown-content mt-3 absolute z-[1] p-2 shadow bg-green-600 rounded-box w-52">
+          <li><a class="text-emerald-50">About</a></li>
+          <li><a class="text-emerald-50">Gallery</a></li>
+          <li><a class="text-emerald-50">Plant a Tree</a></li>
+        </ul>
       </div>
-      <ul
-        tabindex="0"
-        class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-        <li class=" text-emerald-50"><a>About</a></li>
-        <li>
-        <li class=" text-emerald-50"><a>Gallery</a></li>
-        
-        <li class=" text-emerald-50"><a>Plant a Tree</a></li>
+      <!-- Logo -->
+      <h2 class="btn btn-ghost text-2xl text-emerald-50 font-bold">Green Earth</h2>
+    </div>
+
+    <!-- Navbar Center (Desktop only) -->
+    <div class="navbar-center hidden lg:flex">
+      <ul class="menu menu-horizontal px-1">
+        <li><a class="text-emerald-50">About</a></li>
+        <li><a class="text-emerald-50">Gallery</a></li>
+        <li><a class="text-emerald-50">Plant a Tree</a></li>
       </ul>
     </div>
-    <h2 class="btn btn-ghost text-2xl text-emerald-50 font-bold">Green Earth</h2>
-  </div>
-  <div class="navbar-center hidden lg:flex">
-    <ul class="menu menu-horizontal px-1">
-      <li class=" text-emerald-50"><a>About</a></li>
-      <li class=" text-emerald-50">
-      <a>Gallery</a>
-      </li>
-      <li class=" text-emerald-50"><a>Plant a Tree</a></li>
-    </ul>
-  </div>
-  <div class="navbar-end">
-    <button class=" text-emerald-50">Plant a Tree</button>
-  </div>
-</div> 
-<!--banner--> 
-<section class=" flex bg-green-100">
-       <div class="flex-1"><img src="./assets/hero-leaf1.png" alt=""></div>
-       <div class="text-center py-25 flex-1" >
-                  <h2 class="text-4xl font-bold">Plant a Tree, Grow a Future</h2>
-                  <p class="text-[12px] text-gray-500">Join our mission to plant 1 million trees and make the Earth greener for future<br>
-                     generations</p>
-                  <button class="rounded-2xl bg-yellow-300 py-2 px-5">Get Involved</button>
 
- </div>
-       <div class="flex-1"><img src="./assets/hero-leaf2.png" alt=""></div>           
- </section>                       
-    </header>              
-                  
+    <!-- Navbar End -->
+    <div class="navbar-end">
+      <button class="btn bg-green-500 text-white border-0 hover:bg-green-600">
+        Plant a Tree
+      </button>
+    </div>
+  </div>
+
+  <!-- Banner -->
+  <section class="flex flex-col lg:flex-row items-center justify-between bg-green-100 px-6 py-1">
+    <!-- Left Image -->
+    <div class="flex-1 flex justify-center mb-6 lg:mb-0">
+      <img src="./assets/hero-leaf1.png" alt="Leaf 1" class="max-w-xs lg:max-w-sm" />
+    </div>
+
+    <!-- Center Text -->
+    <div class="flex-1 text-center">
+      <h2 class="text-3xl lg:text-4xl font-bold mb-4">Plant a Tree, Grow a Future</h2>
+      <p class="text-sm lg:text-base text-gray-600 mb-6">
+        Join our mission to plant 1 million trees and make the Earth greener for future generations
+      </p>
+      <button class="rounded-2xl bg-yellow-300 py-2 px-6 hover:bg-yellow-400">
+        Get Involved
+      </button>
+    </div>
+
+    <!-- Right Image -->
+    <div class="flex-1 flex justify-center mt-6 lg:mt-0">
+      <img src="./assets/hero-leaf2.png" alt="Leaf 2" class="max-w-xs lg:max-w-sm" />
+    </div>
+  </section>
+</header>
+             
+
        <!--card section-->               
-     <section>
+     <section class="bg-green-100">
+      <h2 class="text-3xl lg:text-4xl font-bold  text-center m-8">Choose Your Trees</h2>          
  
   <div class=" grid grid-cols-12 gap-4">
     <!-- Sidebar (Categories) -->
-    <aside class=" md:col-span-12 lg:col-span-2 bg-red-100 p-4">
-      <h2 class="">Categories</h2>
-      <div id="categories" class=""></div>
+    <aside class="col-span-12 md:col-span-2 rounded-2xl bg-green-100 shadow p-4">
+   
+                     <h2 class="font-bold">Categories</h2>
+                        <h2 class="font-semibold">All tree</h2>
+
+
+      <div class=""></div>
+      <div id="categories" class=" flex flex-col gap-2"></div>
     </aside>
 
     <!-- Main Content (Plants Grid) -->
-    <section id="card-conteiner" class="md:col-span-9 lg:col-span-7 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 bg-slate-500 w-full"> 
+    <section id="card-conteiner" class="col-span-12 md:col-span-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 rounded-2xl bg-green-100 shadow w-full"> 
            
     </section>
  
 
   <!-- Cart Section -->
-  <section id="the crad-conteiner" class="lg:col-span-3 md:col-span-3 bg-green-200 shadow ">
+  <section id="the crad-conteiner" class="col-span-12 md:col-span-2 rounded-2xl bg-green-100 shadow ">
     <h2 class="text-xl font-bold">The Cart</h2>
     <ul id="cart" class="list-disc pl-6"></ul>
     <hr>
@@ -101,34 +135,30 @@
      </section>
       </div>
      </section>
-     <!-- The button to open modal -->
- <label for="my_modal_6" class="btn">open modal</label>
-
- <!-- Put this part before </body> tag -->
- <input type="checkbox" id="my_modal_6" class="modal-toggle" />
- <div class="modal" role="dialog">
+     <!--cart- modal-->
+ <dialog id="my_modal" class="modal">
   <div class="modal-box">
-      <figure>
-          <img src="${card.image}" alt="${card.name}" class="h-36 w-full object-cover"/>
-        </figure>             
-    <h3 class="text-lg font-bold">Hello!</h3>
-    <p class="py-4">This modal works with a hidden checkbox!</p>
+    <div id="modal-container"></div>
     <div class="modal-action">
-      <label for="my_modal_6" class="btn">Close!</label>
+                  <form  method="dialog">      <button class="btn" onclick="closeMyModal()">Close</button></form>
+
     </div>
   </div>
-</div>
+</dialog>
+
      <!--section-2-->
        <section class="mt-20">      
      <h2 class="text-4xl font-bold text-center mt-10 mb-10">About the Campaign</h2>
-     <section class="flex sm:col-auto lg:row-auto justify-center items-center mr-[200px] ml-[200px] gap-5">
+     <section class="flex flex-col lg:flex-row justify-center items-center gap-5 px-5 lg:px-0">
 
-     <div class="flex-1 mb-16">
+     <div  class="flex-1 mb-10 lg:mb-0">
                   <img  src="./assets/about.png"></div>
 
-     <div class="flex-1">
-          <p class="text-[12px] text-gray-500">Green Earth is a global tree plantation initiative dedicated to fighting climate change. Since our start, we’ve planted over 500,000 trees worldwide. By joining our campaign, you help restore forests, create habitats for wildlife, and combat global warming.</p>  
-          <ul>
+     <div class="flex-1 mb-5">
+          <p class="text-sm text-gray-500 mb-4">Green Earth is a global tree plantation initiative dedicated to fighting
+                   climate change. Since our start, we’ve planted over 500,000 trees worldwide. By joining our campaign, you
+                    help restore forests, create habitats for wildlife, and combat global warming.</p>  
+          <ul class="list-disc list-inside text-gray-700 space-y-1">
               <li>Restoration of natural habitats </li>
               <li>Improvement of air quality</li>
               <li>Support for local communities</li>    
@@ -137,11 +167,24 @@
      </section>
      </section>
      <!--section-3-->
-     <section>
-       <div></div>
-       <div></div>
-       <div></div>           
-
+     <section class=" w-full  bg-green-100 mt-10">
+                  <h2 class="text-center text-2xl font-bold py-2">Our Impact</h2> 
+         <div class="grid md:grid-cols-3  grid-cols-1 justify-center items-center gap-6 px-4 lg:px-0">         
+       <div class="bg-white py-5 px-6 rounded-lg shadow-md text-center w-full sm:w-64">
+                  <h2  class="text-center text-2xl font-bold py-1 text-green-800 w-20 "> 500K+</h2>
+                  <p>Treess planted</p>
+      
+       </div>
+       <div class="bg-white py-2 px-3 rounded-lg shadow-md text-center w-full sm:w-64">
+      
+                  <h2  class="text-center text-2xl font-bold py-1  text-green-800 w-20"> 120K+</h2>
+                  <p>communities Involved</p> 
+       </div>
+       <div class="bg-white py-5 px-6 rounded-lg shadow-md text-center w-full sm:w-64">
+                   <h2  class="text-center text-2xl font-bold py-1 text-green-800 w-20"> 30K+</h2>
+                  <p>Countries Reached</p>
+       </div>           
+                  </div>            
      </section>
      <footer>
            <section class="h-72 bg-green-800 flex justify-center items-center">
